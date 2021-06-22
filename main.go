@@ -1,9 +1,19 @@
 package main
 
 import (
-	"github.com/SurajKhayamali/learning-go/structure"
+	"fmt"
+
+	"github.com/SurajKhayamali/learning-go/models"
 )
 
 func main() {
-	structure.User()
+	u := models.User{
+		ID:        1,
+		FirstName: "Arthur",
+		LastName:  "Gunn",
+	}
+
+	fmt.Println(u)
+
+	models.Demo()
 }
