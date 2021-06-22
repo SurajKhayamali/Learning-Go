@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/SurajKhayamali/learning-go/examples"
+	"github.com/SurajKhayamali/learning-go/structure"
 )
 
 func main() {
-	examples.Hello()
+	structure.User()
 }
