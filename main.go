@@ -1,19 +1,19 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/SurajKhayamali/learning-go/models"
+	"github.com/SurajKhayamali/learning-go/utils"
 )
 
 func main() {
-	u := models.User{
-		ID:        1,
-		FirstName: "Arthur",
-		LastName:  "Gunn",
-	}
+	// u := models.User{
+	// 	ID:        1,
+	// 	FirstName: "Arthur",
+	// 	LastName:  "Gunn",
+	// }
 
-	fmt.Println(u)
+	// fmt.Println(u)
 
-	models.Demo()
+	// models.Demo()
+
+	utils.ForLoopDemo()
 }
