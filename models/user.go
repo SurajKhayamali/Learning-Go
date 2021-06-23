@@ -2,10 +2,15 @@ package models
 
 import "fmt"
 
+// public struct
 type User struct {
+	// public field
 	ID        int
 	FirstName string
 	LastName  string
+	// private field, only
+	// available in models package
+	password string
 }
 
 var (
@@ -24,6 +29,12 @@ func AddUser(u User) (User, error) {
 	return u, nil
 }
 
+func (user User) show() {
+	fmt.Println(user)
+}
+
+// this function is public as
+// it begins with a capital letter
 func Demo() {
 	var u User
 	u.ID = 1
@@ -32,9 +43,11 @@ func Demo() {
 	fmt.Println(u)
 
 	u2 := User{
-		ID:        1,
+		ID:        2,
 		FirstName: "Arthur",
 		LastName:  "Gunn",
+		password:  "sensitive",
 	}
 	fmt.Println(u2)
+	u2.show()
 }
