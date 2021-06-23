@@ -8,6 +8,12 @@ func ForLoopDemo() {
 	loopWithPostClauses()
 	println("---------------------------------------")
 	infiniteLoop()
+	println("---------------------------------------")
+	loopWithSlice()
+	println("---------------------------------------")
+	loopWithRange()
+	println("---------------------------------------")
+	loopWithMap()
 }
 
 func loopThatTerminateBasedOnAConditionBreak() {
@@ -62,5 +68,38 @@ func infiniteLoop() {
 		}
 		println(i)
 		i++
+	}
+}
+
+func loopWithSlice() {
+	slice := []int{1, 2, 3}
+	for i := 0; i < len(slice); i++ {
+		println(slice[i])
+	}
+}
+
+func loopWithRange() {
+	slice := []int{1, 2, 3}
+	for i, v := range slice {
+		println(i, v)
+	}
+}
+
+func loopWithMap() {
+	wellKnownPorts := map[string]int{"http": 80, "https": 433}
+	for k, v := range wellKnownPorts {
+		println(k, v)
+	}
+
+	// Special form of multiple returns where the compiler has special consideration for looping over collection
+	// So, We can completely ignore that second return value,
+	// normally you cannot do that when you get two return values comming back from a function
+	for k := range wellKnownPorts {
+		println(k)
+	}
+
+	// using write only variable '_'
+	for _, v := range wellKnownPorts {
+		println(v)
 	}
 }
