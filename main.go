@@ -1,6 +1,8 @@
 package main
 
-import "github.com/SurajKhayamali/learning-go/models"
+import (
+	"github.com/SurajKhayamali/learning-go/utils"
+)
 
 func main() {
 	// u := models.User{
@@ -11,9 +13,11 @@ func main() {
 
 	// fmt.Println(u)
 
-	models.Demo()
+	// models.Demo()
 
 	// utils.ForLoopDemo()
 
 	// utils.PanicDemo()
+
+	utils.SwitchDemo()
 }
