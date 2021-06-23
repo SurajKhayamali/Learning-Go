@@ -50,4 +50,12 @@ func Demo() {
 	}
 	fmt.Println(u2)
 	u2.show()
+
+	if u == u2 {
+		println("Same users!")
+	} else if u.FirstName == u2.FirstName {
+		println("Similar users.")
+	} else {
+		println("Different user!")
+	}
 }
